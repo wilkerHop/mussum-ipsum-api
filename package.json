@@ -1,0 +1,24 @@
+{
+  "name": "mussum-ipsum-api",
+  "version": "1.0.0",
+  "description": "API rest para o Mussum Ipsum",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilkerHop/mussum-ipsum-api.git"
+  },
+  "author": "Wilker Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilkerHop/mussum-ipsum-api/issues"
+  },
+  "homepage": "https://github.com/wilkerHop/mussum-ipsum-api#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
