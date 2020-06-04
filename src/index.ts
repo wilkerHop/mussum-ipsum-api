@@ -3,8 +3,8 @@ import { IO } from 'fp-ts/lib/IO';
 import { listener } from '@app';
 
 const server = createServer({
-  port: 1337,
-  hostname: '127.0.0.1',
+  port: +process.env.port! || 1337,
+  hostname: process.env.hostname ?? '127.0.0.1',
   listener,
 });
 
