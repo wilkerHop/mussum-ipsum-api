@@ -1,8 +1,12 @@
 import { EffectFactory, combineRoutes } from '@marblejs/core';
-import { firstSentenceEffect$ } from './effects';
+import { firstSentenceEffect$, randomSentenceEffect$ } from './effects';
 
 const root$ = EffectFactory.matchPath('/')
   .matchType('GET')
   .use(firstSentenceEffect$);
 
-export const sentences$ = combineRoutes('/frases', [root$]);
+const random$ = EffectFactory.matchPath('/random')
+  .matchType('GET')
+  .use(randomSentenceEffect$);
+
+export const sentences$ = combineRoutes('/frases', [root$, random$]);
