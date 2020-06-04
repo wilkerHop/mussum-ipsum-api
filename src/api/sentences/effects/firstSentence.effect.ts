@@ -1,12 +1,12 @@
 import { HttpEffect, HttpError, HttpStatus } from '@marblejs/core';
 import { map, catchError } from 'rxjs/operators';
-import { firstSentence } from '../helpers';
+import { firstSentence, buildResponse } from '../helpers';
 import { throwError } from 'rxjs';
 
 export const firstSentenceEffect$: HttpEffect = req$ =>
   req$.pipe(
     map(firstSentence),
-    map(mipsum => ({ body: { mipsum } })),
+    map(buildResponse),
     catchError(err =>
       throwError(
         new HttpError(
