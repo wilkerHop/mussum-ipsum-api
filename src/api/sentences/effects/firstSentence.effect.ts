@@ -1,5 +1,5 @@
 import { HttpEffect, HttpError, HttpStatus } from '@marblejs/core';
-import { mapTo, map, catchError } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 import { firstSentence } from '../helpers';
 import { throwError } from 'rxjs';
 
