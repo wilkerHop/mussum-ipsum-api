@@ -7,7 +7,7 @@
     "build-start": "npm run build && npm run start",
     "start": "node -r ./tsconfig-paths.js dist/index.js",
     "build": "tsc --build tsconfig.json",
-    "test": "jest --expand --all --colors --verbose --runInBand"
+    "test": "jest --expand --all --colors --no-cache --verbose --runInBand"
   },
   "repository": {
     "type": "git",
