@@ -1,0 +1,32 @@
+{
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "clearMocks": true,
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/*.test.ts"
+  ],
+  "roots": [
+    "src"
+  ],
+  "coverageDirectory": "./coverage/",
+  "coveragePathIgnorePatterns": [
+    ".test.ts",
+    "src/index.ts",
+    "src/config"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.ts"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "./tsconfig.json"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/class-name-casing": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "function-paren-newline": "off",
+    "curly": "error",
+    "eqeqeq": "error",
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "no-duplicate-case": "error",
+    "no-duplicate-imports": "error",
+    "no-new-wrappers": "error",
+    "no-return-await": "error",
+    "no-console": [
+      1,
+      {
+        "allow": [
+          "time",
+          "timeEnd",
+          "info",
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "builtinGlobals": false,
+        "hoist": "functions",
+        "allow": []
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  }
+}

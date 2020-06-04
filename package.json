@@ -4,8 +4,10 @@
   "description": "API rest para o Mussum Ipsum",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-start": "npm run build && npm run start",
+    "start": "node -r ./tsconfig-paths.js dist/index.js",
+    "build": "tsc --build tsconfig.json",
+    "test": "jest --expand --all --colors --verbose --runInBand"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,38 @@
     "url": "https://github.com/wilkerHop/mussum-ipsum-api/issues"
   },
   "homepage": "https://github.com/wilkerHop/mussum-ipsum-api#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.2"
+    "@marblejs/core": "3.1.1",
+    "@marblejs/middleware-body": "3.1.1",
+    "@marblejs/middleware-cors": "3.1.1",
+    "@marblejs/middleware-io": "3.1.1",
+    "@marblejs/middleware-logger": "3.1.1",
+    "chalk": "^4.0.0",
+    "fp-ts": "^2.4.2",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^10.1.2",
+    "@types/supertest": "^2.0.9",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^0.14.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "3.9.3"
   }
 }
